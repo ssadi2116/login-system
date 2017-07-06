@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html>
+<body >
+
+<head>
+<title>registration form</title>
+<style>
+*{
+	margin:0px;
+	padding:0px;
+	}
+body{
+	font-family:Tahoma, Geneva, sans-serif;
+background-image: url(http://hdwpro.com/wp-content/uploads/2016/12/Bicycle-Wallpaper-HD.jpg); 
+-moz-background-size: cover;
+-webkit-background-size: cover;
+background-size: cover;
+background-position: top center !important;
+background-repeat: no-repeat !important;
+background-attachment: fixed;
+	}
+#container{
+	width:550px;
+	background-color:rgba(250,250,252,.9);
+
+margin:auto auto;
+	box-shadow:0 0 3px #999;
+                   opacity: 0.8;
+	}
+#container_body{
+	padding:20px;
+	}
+.form_title{
+	font-size:35px;
+	color:#141823;
+	text-align:center;
+	padding:10px;
+	font-weight:normal;
+	}
+.head_para{
+	font-size:19px;
+	color:#99a2a7;
+	text-align:center;
+	font-weight:normal;
+	}
+#form_name{
+	padding:25px 0 0 15px;
+	}
+.firstnameorlastname{
+	 margin-right:20px;
+	}
+.input_name{
+	width:207px;
+	padding:5px;
+	font-size:18px;
+	}
+	
+	#age{
+	padding:15px 0 10px 0px;
+	}
+.age{
+	width:434px;
+	padding:5px;
+	font-size:18px;
+	}
+	
+#email_form{
+	padding:15px 0 10px 0px;
+	}
+.input_email{
+	width:434px;
+	padding:5px;
+	font-size:18px;
+	}
+
+#password_form{
+	padding:10px 0 10px 0px;
+	}
+.input_password{
+	width:434px;
+	padding:5px;
+	font-size:18px;
+	}
+#Re_password_form{
+	padding:10px 0 10px 0px;
+	}
+.input_Re_password{
+	width:434px;
+	padding:5px;
+	font-size:18px;
+	}
+
+select{
+	padding:5px;
+	}
+#birthday{
+	font-size:12px;
+	color:#8b919d;
+	padding-top:10px;
+	}
+#radio_button{
+	padding:10px 0 0 0;
+	}
+#sign_user{
+	font-size:14px;
+	color:#FFF;
+	text-align:center;
+	background-color:#3B5998;
+	width:475px;
+	padding:10px;
+	margin-top:10px;
+	cursor: pointer;
+	}
+#errorBox{
+	color:#F00;
+	}
+
+
+
+</style>
+<script language='javascript' type='text/javascript'>
+
+function check(input) {
+if (input.value != document.getElementById('password').value) {
+input.setCustomValidity('Password Must be Matching.');
+} 
+else {
+// input is valid -- reset the error message
+input.setCustomValidity('');
+}
+}
+
+
+</script>
+
+<!--container start-->
+<div id="container">
+  <div id="container_body">
+    <div>
+      <h2 class="form_title">Student Online Registration Form</h2>
+      
+<font size="5" color="#3380FF">PLEASE FILL IN ALL THE DETAILS:</font>
+    </div>
+    <!--Form  start-->
+    <div id="form_name">
+      <div class="firstnameorlastname">
+       <form name="form" action="signup.php" method="get" >
+       <div id="errorBox"></div>
+        <input type="text" name="Name" value="" placeholder="First Name"  class="input_name" required>
+        <input type="text" name="LastName" value="" placeholder="Last Name" class="input_name" required>
+        <div id="age">
+        <input type="number" name="age" value=""  placeholder="Your age" class="age" required>
+      </div>
+		
+      </div>
+      <div id="email_form">
+        <input type="text" name="username" value=""  placeholder="Your Username" class="input_email" required>
+      </div>
+	  
+      
+      
+        <input type="password" name="password" value=""  id="password" placeholder="New Password" class="input_password" required>
+      
+       <div id="Re_password_form">
+        <input type="password" name="enterpassword" value=""  placeholder="Re-enter password" class="input_Re_password"  oninput="check(this)"  required>
+      </div>
+      
+      <div id="radio_button">
+        <input type="radio" name="radiobutton" value="Female" required>
+        <label >Female</label>
+        &nbsp;&nbsp;&nbsp;
+        <input type="radio" name="radiobutton" value="Male" required>
+        <label >Male</label>
+      </div>
+       <div>
+	   <input id="sign_user" type="submit"  value="SIGNUP"></input>
+	   
+      </div>
+     </form>
+    </div>
+    <!--form ends--> 
+  </div>
+</div>
+<!--container ends-->
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<body >
+
+<head>
+<title>Login page</title>
+<style>
+*{
+	margin:0px;
+	padding:0px;
+	}
+body{
+	font-family:Tahoma, Geneva, sans-serif;
+	}
+
+
+body {
+background-image: url(http://7bna.net/images/hd-background-images/hd-background-images-0.jpg); 
+-moz-background-size: cover;
+-webkit-background-size: cover;
+background-size: cover;
+background-position: top center !important;
+background-repeat: no-repeat !important;
+background-attachment: fixed;
+}
+#container{
+	width:350px;
+	background-color:rgba(250,250,252,.9);
+	margin:auto;
+	margin-top:10px;
+	margin-bottom:10px;
+	box-shadow:0 0 3px #999;
+    opacity: 0.8;
+	border-radius: 25px;
+	}
+#container_body{
+	padding:20px;
+	}
+.form_title{
+	font-size:35px;
+	color:#141823;
+	align:center;
+	padding:10px;
+	font-weight:normal;
+	}
+.head_para{
+	font-size:19px;
+	color:#99a2a7;
+	text-align:center;
+	font-weight:normal;
+	}
+#stdid_form{
+	padding:20px 0px 10px 0px;
+	}
+.input_stdid{
+	
+	width:300px;
+	padding:5px;
+	font-size:18px;
+	}
+#password_form{
+	padding:20px 0 10px 0px;
+	}
+.input_password{
+	width:300px;
+	padding:5px;
+	font-size:18px;
+	}
+#sign_user{
+	font-size:14px;
+	color:#FFF;
+	text-align:center;
+	background-color:#3B5998;
+	width:300px;
+	padding:10px;
+	margin-top:10px;
+	cursor: pointer;
+	}
+#errorBox{
+	color:#F00;
+	}
+</style>
+
+<!--container start-->
+<div id="container">
+  <div id="container_body">
+    <div>
+      <p align="center"><br><img src="profile.png" style="width: 200px;height: 200px"></span><p>
+    <!--Form  start-->
+    <form action="loggedin.php" method="GET">
+      <div id="stdid_form">
+        <input type="text" name="username" value=""  placeholder="Your username" class="input_stdid">
+      </div>
+
+      <div id="password_form">
+        <input type="password" name="password" value=""  placeholder="Your Password" class="input_password">
+      </div>
+
+       <div>
+	      <button id="sign_user" type="submit" onClick="Submit()">LOGIN</button>
+       
+      </div>
+     </form>
+    </div>
+    <!--form ends--> 
+  </div>
+</div>
+<!--container ends-->
+</div>
+
+
+</body>
+</html>
